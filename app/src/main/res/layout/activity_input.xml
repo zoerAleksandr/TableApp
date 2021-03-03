@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background_input"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_input_basic"
+    tools:context=".InputActivity">
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="316dp"
+        android:layout_height="274dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/input1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/empty"
+                android:fontFamily="@font/agenda_bold"
+                android:hapticFeedbackEnabled="false"
+                android:onClick="input"
+                android:text="1"
+                android:textColor="#3a3d3e"
+                android:textSize="50sp" />
+
+            <Button
+                android:id="@+id/input2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/empty"
+                android:fontFamily="@font/agenda_bold"
+                android:hapticFeedbackEnabled="false"
+                android:onClick="input"
+                android:text="2"
+                android:textColor="#3a3d3e"
+                android:textSize="50sp" />
+
+            <Button
+                android:id="@+id/input3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/empty"
+                android:fontFamily="@font/agenda_bold"
+                android:hapticFeedbackEnabled="false"
+                android:onClick="input"
+                android:text="3"
+                android:textColor="#3a3d3e"
+                android:textSize="50sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/input4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/empty"
+                android:fontFamily="@font/agenda_bold"
+                android:onClick="input"
+                android:text="4"
+                android:textColor="#3a3d3e"
+                android:textSize="50sp" />
+
+            <Button
+                android:id="@+id/input5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/empty"
+                android:fontFamily="@font/agenda_bold"
+                android:onClick="input"
+                android:text="5"
+                android:textColor="#3a3d3e"
+                android:textSize="50sp" />
+
+            <Button
+                android:id="@+id/input6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/empty"
+                android:fontFamily="@font/agenda_bold"
+                android:onClick="input"
+                android:text="6"
+                android:textColor="#3a3d3e"
+                android:textSize="50sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/input7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/empty"
+                android:fontFamily="@font/agenda_bold"
+                android:onClick="input"
+                android:text="7"
+                android:textColor="#3a3d3e"
+                android:textSize="50sp" />
+
+            <Button
+                android:id="@+id/input8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/empty"
+                android:fontFamily="@font/agenda_bold"
+                android:onClick="input"
+                android:text="8"
+                android:textColor="#3a3d3e"
+                android:textSize="50sp" />
+
+            <Button
+                android:id="@+id/input9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/empty"
+                android:fontFamily="@font/agenda_bold"
+                android:onClick="input"
+                android:text="9"
+                android:textColor="#3a3d3e"
+                android:textSize="50sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button_back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/input_delete"
+                android:onClick="input" />
+
+            <Button
+                android:id="@+id/input0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/empty"
+                android:fontFamily="@font/agenda_bold"
+                android:onClick="input"
+                android:text="0"
+                android:textColor="#3a3d3e"
+                android:textSize="50sp" />
+
+            <Button
+                android:id="@+id/button_enter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/input_input"
+                android:onClick="input" />
+        </TableRow>
+    </TableLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar_input"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="371dp"
+        android:layout_height="28dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="397dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="261dp"
+        android:layout_height="113dp"
+        android:background="@drawable/background_for_example"
+        android:fontFamily="@font/agenda_bold"
+        android:gravity="center"
+        android:shadowColor="#3a3d3e"
+        android:textSize="65sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="26dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

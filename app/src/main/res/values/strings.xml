@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TableApp</string>
+    <string name="button1">Учить</string>
+    <string name="button2">Тренировать</string>
+    <string name="all_table">Вся таблица</string>
+    <string name="back">Назад</string>
+    <string name="Volume">Звук</string>
+    <string name="answer">Ответить</string>
+    <string name="level">null</string>
+
+</resources>
