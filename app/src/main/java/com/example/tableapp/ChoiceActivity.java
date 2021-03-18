@@ -26,7 +26,6 @@ public class ChoiceActivity extends MyAbstractClass {
 
     Button option1, option2, option3;
 
-
     ProgressBar progressBar;
     CountDownTimer timer;
 
@@ -48,6 +47,7 @@ public class ChoiceActivity extends MyAbstractClass {
     int numb2; // переменная для наполнения number2
 
     ConstraintLayout background;
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();
@@ -69,7 +69,7 @@ public class ChoiceActivity extends MyAbstractClass {
         Log.d(TAG, "Сработал метод onStart ...");
         super.onStart();
 
-        }
+    }
 
     @Override
     protected void onPause() {
@@ -83,7 +83,6 @@ public class ChoiceActivity extends MyAbstractClass {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choice);
-
 
 
         options = new ArrayList<>(3);
@@ -352,8 +351,8 @@ public class ChoiceActivity extends MyAbstractClass {
                     break;
 
                 // В default прописать какой пример открыть если в предыдущем Activity не выбрано
-            }}
-        else {
+            }
+        } else {
             Log.d(TAG, " Метод onCreate: РНО ...");
             test = 1;
             setting_image(incorrectListQuestion, incorrectListAnswer);
@@ -363,11 +362,11 @@ public class ChoiceActivity extends MyAbstractClass {
     }
 
     // установка Image и правильного ответа
-    public void setting_image(ArrayList<Integer> arrayListQuestion, ArrayList<Integer> arrayListAnswer){
-            Log.d(TAG, " Метод setting_image: установка изображения вопроса и назначение правильного ответа ...");
-            example.setImageResource(arrayListQuestion.get(0));
-            right = arrayListAnswer.get(0);
-            timer_start(getAppLevelChallenge());
+    public void setting_image(ArrayList<Integer> arrayListQuestion, ArrayList<Integer> arrayListAnswer) {
+        Log.d(TAG, " Метод setting_image: установка изображения вопроса и назначение правильного ответа ...");
+        example.setImageResource(arrayListQuestion.get(0));
+        right = arrayListAnswer.get(0);
+        timer_start(getAppLevelChallenge());
 
     }
 
@@ -390,9 +389,9 @@ public class ChoiceActivity extends MyAbstractClass {
                     @Override
                     public void onFinish() {
                         Log.d(TAG, "Вышло время таймера - 1");
-                        if(test == 1) {
+                        if (test == 1) {
                             incorrect_click(incorrectListQuestion);
-                        }else{
+                        } else {
                             incorrect_click(drawables);
                         }
                     }
@@ -414,9 +413,9 @@ public class ChoiceActivity extends MyAbstractClass {
                     @Override
                     public void onFinish() {
                         Log.d(TAG, "Вышло время таймера - 2");
-                        if(test == 1) {
+                        if (test == 1) {
                             incorrect_click(incorrectListQuestion);
-                        }else{
+                        } else {
                             incorrect_click(drawables);
                         }
                     }
@@ -426,7 +425,7 @@ public class ChoiceActivity extends MyAbstractClass {
     }
 
     //остановка таймера
-    public void timer_stop(){
+    public void timer_stop() {
         Log.d(TAG, "Сработал метод timer_stop");
         if (timer != null) {
             timer.cancel();
@@ -437,12 +436,12 @@ public class ChoiceActivity extends MyAbstractClass {
     // установка значения кнопок
     public void setting_the_value_button() {
         Log.d(TAG, "Устонавливаем значения для кнопок");
-    // варианты ответа
+        // варианты ответа
         options.add(0, option1);
         options.add(1, option2);
         options.add(2, option3);
 
-    // определяем какая кнопка будет с правильным ответом, а какие с неверным
+        // определяем какая кнопка будет с правильным ответом, а какие с неверным
         number = new ArrayList<>();
         while (number.size() != 3) {
             numb = random.nextInt(3);
@@ -462,9 +461,9 @@ public class ChoiceActivity extends MyAbstractClass {
         while (number2.size() != 2) {
             int a;
             int b;
-            if (right <= 5){
+            if (right <= 5) {
                 a = 1;
-            }else {
+            } else {
                 a = right - 5;
             }
             b = right + 5;
@@ -487,17 +486,17 @@ public class ChoiceActivity extends MyAbstractClass {
         // Если строка на нажатой кнопке соответствует текущему правильному ответу -> try
         if (buttonText == right) {
             Log.d(TAG, "Ответ верный");
-            if(rights.contains(right)){
+            if (rights.contains(right)) {
                 right_click(drawables, rights);
-                }else {
-                    right_click(incorrectListQuestion, incorrectListAnswer);
+            } else {
+                right_click(incorrectListQuestion, incorrectListAnswer);
             }
         } else {
             Log.d(TAG, "Ответ неверный");
-            if(rights.contains(right)){
+            if (rights.contains(right)) {
                 incorrect_click(drawables);
-                }else {
-                    incorrect_click(incorrectListQuestion);
+            } else {
+                incorrect_click(incorrectListQuestion);
             }
         }
     }
@@ -556,7 +555,7 @@ public class ChoiceActivity extends MyAbstractClass {
 
 
         // если это РНО
-        if(arrayListQuestion.equals(incorrectListQuestion)){
+        if (arrayListQuestion.equals(incorrectListQuestion)) {
             Log.d(TAG, "Метод incorrect_click: РНО");
 
             // в конец списка добавляем неверный ответ и удаляем текущий
