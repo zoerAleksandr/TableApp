@@ -23,7 +23,7 @@
         android:id="@+id/btnRepeat"
         android:layout_width="127dp"
         android:layout_height="80dp"
-        android:background="@drawable/btn_repeat"
+        android:background="@drawable/btn_repeat3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button_continue"
         app:layout_constraintHorizontal_bias="0.5"

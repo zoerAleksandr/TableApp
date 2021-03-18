@@ -186,7 +186,6 @@ public class InputActivity extends MyAbstractClass {
                     exampleHash.put(81, "9 * 9 = ");
                     exampleHash.put(90, "9 * 10 = ");
                     break;
-
             }
             s = exampleHash.get(i);
             if(getAppLevelChallenge() > 0){
@@ -204,13 +203,11 @@ public class InputActivity extends MyAbstractClass {
             s = incorrectMapQuestion.get(keyArray.get(0));
             i = keyArray.get(0);
         }
-
         textView.setText(s);
         if(getAppLevelChallenge() > 0){
             timerStop();
             timerStart(getAppLevelChallenge(), progressBar);
         }
-
     }
 
 // обработчик клавишей ввода
@@ -401,7 +398,6 @@ public class InputActivity extends MyAbstractClass {
     public String inputNumber(String str, String strNew){
         str = str + strNew;
         return str;
-
     }
 
     public void timerStart(int time, ProgressBar view){
